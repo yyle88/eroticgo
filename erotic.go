@@ -18,7 +18,7 @@ const (
 
 type COLOR string
 
-func (R COLOR) Sprint(args ...interface{}) string {
+func (co COLOR) Sprint(args ...interface{}) string {
 	var messages = make([]string, 0, len(args))
 	for _, v := range args {
 		messages = append(messages, fmt.Sprint(v))
@@ -28,8 +28,16 @@ func (R COLOR) Sprint(args ...interface{}) string {
 
 	newLines := make([]string, 0, len(sps))
 	for _, sub := range sps {
-		newLines = append(newLines, fmt.Sprintf(string(R), sub))
+		newLines = append(newLines, fmt.Sprintf(string(co), sub))
 	}
 	res := strings.Join(newLines, "\n")
 	return res
+}
+
+func (co COLOR) ShowMessage(msgs ...any) {
+	fmt.Println(co.Sprint("----------------------------------------"))
+	fmt.Println(co.Sprint("----------------------------------------"))
+	fmt.Println(co.Sprint(msgs...))
+	fmt.Println(co.Sprint("----------------------------------------"))
+	fmt.Println(co.Sprint("----------------------------------------"))
 }
