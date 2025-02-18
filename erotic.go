@@ -14,6 +14,7 @@ const (
 	MAGENTA = COLOR("\033[1;35m%s\033[0m")
 	CYAN    = COLOR("\033[1;36m%s\033[0m")
 	WHITE   = COLOR("\033[1;37m%s\033[0m")
+	PINK    = COLOR("\033[1;95m%s\033[0m")
 )
 
 type COLOR string

@@ -12,7 +12,7 @@ func TestExample(t *testing.T) {
 }
 
 var colors = []COLOR{
-	BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE,
+	BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, PINK,
 }
 
 func TestCOLOR_Sprint(t *testing.T) {
